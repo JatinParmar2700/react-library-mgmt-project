@@ -1,0 +1,82 @@
+/* ul{
+
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.header{
+text-decoration: none;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+header ul li a{
+    list-style-type:none;
+    margin: 10px;
+    font-size: medium;
+}
+
+.header ul  a {
+    text-decoration: none;
+    color: inherit; 
+} */
+
+
+/* Basic reset for list items and links */
+ul {
+    list-style: none; /* Removes default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arranges list items horizontally */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 25px; /* Adds space between list items */
+}
+
+.header {
+    background-color: #6a1b9a; /* Deep purple background */
+    padding: 15px 30px; /* Vertical and horizontal padding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 10px; /* Slightly rounded corners for the header container */
+    margin-bottom: 20px; /* Space below the header */
+    display: flex; /* Use flexbox for the header itself */
+    justify-content: center; /* Center the ul inside the header */
+    align-items: center;
+}
+
+/* Styling for the Link components (which render as <a> tags) */
+.header ul a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #ffffff; /* White text color for links */
+    font-size: 1.1em; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight */
+    padding: 8px 15px; /* Padding inside the link area */
+    border-radius: 8px; /* Rounded corners for link backgrounds */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+}
+
+/* Styling for list items when they are directly inside a Link (like Fiction, NonFiction, etc.) */
+.header ul a li {
+    /* This targets the li *inside* the Link. */
+    /* If you want the li to have its own styling, you can add it here. */
+    /* For now, the styling on 'a' will largely cover it. */
+    margin: 0; /* Remove default margin from li if any */
+    padding: 0; /* Remove default padding from li if any */
+}
+
+
+/* Hover effect for links */
+.header ul a:hover {
+    background-color: #8e24aa; /* Lighter purple on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Active link style (optional, for when a link is the current route) */
+/* You would typically add a class to the active link using NavLink from react-router-dom,
+   but for basic Link, you might need to handle active state programmatically or with more advanced CSS. */
+/* .header ul a.active {
+    background-color: #ba68c8;
+    font-weight: 700;
+} */
